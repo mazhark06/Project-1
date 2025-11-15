@@ -9,7 +9,7 @@ function Header() {
           <div className="contact-info max-sm:flex-col flex gap-6 max-sm:gap-1 py-1 text-center ">
             <span className="">
               {" "}
-              <i className="ri-phone-fill"></i>+91 9876543210
+              <i className="ri-phone-fill"></i>+91-916-251-1155
             </span>
             <span className="">
               <i className="ri-mail-fill"></i> excelindustriess@gmail.com
@@ -30,7 +30,7 @@ function Header() {
       <div className="header-section  flex w-screen h-fit py-3  bg-white shadow-md ">
         <div className="w-[85%] mx-auto ">
         <div className="logo">
-          <img src={logo} className="w-[15%]" alt="" />
+          <img src={logo} className="w-[15%] max-sm:w-[50%]" alt="" />
         </div>
         <div className="navbar ">
           <ul>
