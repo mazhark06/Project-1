@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import ScreenWidth from "../hooks/ScreenWidth";
+import { Desktop, Mobile } from "./Navbar";
 import logo from "../assets/IMG_0760-removebg-preview.png";
 function Header() {
+  const screenWidth = ScreenWidth();
+  const isDesktop = screenWidth > 768
   return (
     <div>
       <div className="top-section  w-screen  bg-teal-400 ">
@@ -15,7 +20,7 @@ function Header() {
               <i className="ri-mail-fill"></i> excelindustriess@gmail.com
             </span>
           </div>
-          <div className="social-info flex gap-2">
+          <div className="social-info max-sm:hidden flex gap-2">
             <a href="https://www.instagram.com/excel_industriess?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="__blank">
               <i className="ri-instagram-line text-2xl"></i>
             </a>
@@ -28,19 +33,11 @@ function Header() {
       </div>
       {/* Header Started  */}
       <div className="header-section  flex w-screen h-fit py-3  bg-white shadow-md ">
-        <div className="w-[85%] mx-auto ">
-        <div className="logo">
-          <img src={logo} className="w-[15%] max-sm:w-[50%]" alt="" />
-        </div>
-        <div className="navbar ">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
+        <div className="w-[85%] flex mx-auto ">
+          <div className="logo">
+            <Link to="/"> <img src={logo} className="w-[25%] max-sm:w-[50%]" alt="" /></Link>
+          </div>
+          {isDesktop ? <Desktop /> : <Mobile />}
         </div>
       </div>
     </div>
