@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ScreenWidth from "../hooks/ScreenWidth";
 import { Desktop, Mobile } from "./Navbar";
 import logo from "../assets/IMG_0760-removebg-preview.png";
-import ImageSlider from "./ImageSlider";
 function Header() {
   const screenWidth = ScreenWidth();
   const isDesktop = screenWidth > 768
@@ -41,9 +40,7 @@ function Header() {
           {isDesktop ? <Desktop /> : <Mobile />}
         </div>
       </div>
-      <div className="Imageslider w-full">
-        <ImageSlider />
-      </div>
+      
     </div>
   );
 }

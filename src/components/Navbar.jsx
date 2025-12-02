@@ -50,8 +50,8 @@ function Desktop() {
   return (
     <div className='flex w-full mx-auto items-center justify-center'>
       <ul className='flex gap-5 '>
-        <li className='hover:text-red-500 cursor-pointer '><NavLink to="/">Home</NavLink></li>
-        <li className='hover:text-red-500 cursor-pointer '><NavLink to="/about-us">About Us</NavLink></li>
+        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500` : `text-black`} to="/">Home</NavLink></li>
+        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500` : `text-black`} to="/about-us">About Us</NavLink></li>
         <li
           onMouseEnter={() => { setActive(true); clearTimer() }}
           onMouseLeave={startCloseTimer}
@@ -66,13 +66,13 @@ function Desktop() {
             >
               {optionArr.map((item, index) => (
                 <li key={index} className=' w-full '>
-                  <NavLink to={item.link} className='w-full block hover:bg-neutral-200 py-1 px-2'>{item.name}</NavLink>
+                  <NavLink  to={item.link} className='w-full block hover:bg-neutral-200 py-1 px-2'>{item.name}</NavLink>
                 </li>
               ))}
             </ul>
           </div>
         </li>
-        <li className='hover:text-red-500 cursor-pointer '>Contact us</li>
+        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500` : `text-black`} to="/contact-us">Contact Us</NavLink></li>
       </ul>
     </div>
   )

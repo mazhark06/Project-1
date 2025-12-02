@@ -23,7 +23,7 @@ function ImageSlider() {
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {images.map((img, i) => (
-          <div className='w-full h-full flex-shrink-0' key={i}>
+          <div className='w-full h-full shrink-0' key={i}>
             <img
               loading='lazy'
               src={img}
