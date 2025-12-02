@@ -4,6 +4,9 @@ import { Link, NavLink } from 'react-router-dom'
     { name: 'Medical-Equipments', link: '/medical-equipment' },
     { name: 'Medical-Beds', link: '/medical-bed' },
     { name: 'Medical-Furniture', link: '/medical-furniture' },
+    { name: 'Operating Light', link: '/operating-light' },
+    { name: 'Operating Table', link: '/operting-table' },
+
   ]
 function Mobile() {
   const [active, setActive] = useState(false)
@@ -49,15 +52,15 @@ function Desktop() {
 
   return (
     <div className='flex w-full mx-auto items-center justify-center'>
-      <ul className='flex gap-5 '>
-        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500` : `text-black`} to="/">Home</NavLink></li>
-        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500` : `text-black`} to="/about-us">About Us</NavLink></li>
+      <ul className='flex gap-5 text-sm font-["Open_sans"] '>
+        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500 font-semibold` : `text-black`} to="/">Home</NavLink></li>
+        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500 font-semibold` : `text-black`} to="/about-us">About Us</NavLink></li>
         <li
           onMouseEnter={() => { setActive(true); clearTimer() }}
           onMouseLeave={startCloseTimer}
-          className='relative h-fit hover:text-red-500 cursor-pointer'
+          className='relative w-20 h-fit hover:text-red-500 cursor-pointer'
         >
-          Products +
+          Products {!active? '+' : '-'}
           <div className='text-black'>
             <ul
               onMouseEnter={() => { setActive(true); clearTimer() }}
@@ -72,7 +75,7 @@ function Desktop() {
             </ul>
           </div>
         </li>
-        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500` : `text-black`} to="/contact-us">Contact Us</NavLink></li>
+        <li className='hover:text-red-500 cursor-pointer '><NavLink className={({isActive}) => isActive ? `text-red-500 font-semibold` : `text-black`} to="/contact-us">Contact Us</NavLink></li>
       </ul>
     </div>
   )

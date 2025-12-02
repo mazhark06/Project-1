@@ -1,7 +1,7 @@
 import React from 'react'
 let images = [
   "/slider-1.jpg",
-  "/slider-2.jpeg",
+  "/slider-2.jpg",
   "/slider-3.jpg",
 ]
 
@@ -39,7 +39,7 @@ function ImageSlider() {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full ${i === index ? 'bg-white' : 'bg-white/50'}`}
+            className={`w-3 h-3 rounded-full ${i === index ? 'bg-neutral-300' : 'bg-gray-500'}`}
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
