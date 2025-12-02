@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-screen text-center'>Footer</div>
+    <div className='w-full text-center'>Footer</div>
   )
 }
 

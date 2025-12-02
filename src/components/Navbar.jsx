@@ -40,7 +40,7 @@ function Desktop() {
     timerRef.current = setTimeout(() => {
       setActive(false)
       timerRef.current = null
-    }, 1000)
+    }, 600)
   }
 
   React.useEffect(() => {

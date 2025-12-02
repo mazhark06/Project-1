@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import ScreenWidth from "../hooks/ScreenWidth";
 import { Desktop, Mobile } from "./Navbar";
 import logo from "../assets/IMG_0760-removebg-preview.png";
+import ImageSlider from "./ImageSlider";
 function Header() {
   const screenWidth = ScreenWidth();
   const isDesktop = screenWidth > 768
   return (
-    <div>
-      <div className="top-section  w-screen  bg-teal-400 ">
+    <div className="">
+      <div className="top-section z-50 w-full  bg-teal-400 ">
         <div className="font-['Open_sans'] max-sm:flex-col w-[85%] mx-auto font-semibold  h-fit items-center flex justify-between ">
           {" "}
           <div className="contact-info max-sm:flex-col flex gap-6 max-sm:gap-1 py-1 text-center ">
@@ -32,13 +33,16 @@ function Header() {
         </div>
       </div>
       {/* Header Started  */}
-      <div className="header-section  flex w-screen h-fit py-3  bg-white shadow-md ">
+      <div className="header-section sticky z-10 top-0 flex w-full h-fit py-3  bg-white shadow-md ">
         <div className="w-[85%] flex mx-auto ">
           <div className="logo">
             <Link to="/"> <img src={logo} className="w-[25%] max-sm:w-[50%]" alt="" /></Link>
           </div>
           {isDesktop ? <Desktop /> : <Mobile />}
         </div>
+      </div>
+      <div className="Imageslider w-full">
+        <ImageSlider />
       </div>
     </div>
   );
