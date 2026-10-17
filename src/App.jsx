@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Layout from './components/Layout'
-
+import Layout from './layout/Layout';
+import Header from "./components/client components/Header"
+import Footer from "./components/client components/Footer"
 function App() {
 
   return (
     <>
-  <Layout/>
+    
+      <Header />
+      <Layout/>
+      <Footer />
     </>
   )
 }

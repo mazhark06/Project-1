@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+.top-section {
+  background-image: url("tophead.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .header-section{
+background-image: url("../public/head.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+@theme {
+    --color-brand: #e62229;
+    --color-second:#ffffff;
+}
